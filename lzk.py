@@ -7,6 +7,7 @@ P = enum.Enum('P', 'START SEARCH')
 
 
 def compress(l, diStart = 256):
+	lc = bytearray()
 	d = dict()
 	di = diStart
 	state = P.START
@@ -28,11 +29,15 @@ def compress(l, diStart = 256):
 				d[di] = c
 				di += 1
 				if partFound == None:
-					partFound = l[i-1]
+					#partFound = l[i-1]
 					partFound = c[0]
 				print("{}, {}".format(partFound, l[i]))
+				lc.append(partFound)
+				lc.append(l[i])
 				state = P.START
 	print(d)
+	print("{}, [{}]".format(len(l), l))
+	print("{}, [{}]".format(len(lc), lc))
 
 
 def compress_str(l, diStart=128):
