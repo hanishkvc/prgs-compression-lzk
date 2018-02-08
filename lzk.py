@@ -38,13 +38,29 @@ def compress(l, diStart = 256):
 	print(d)
 	print("{}, [{}]".format(len(l), l))
 	print("{}, [{}]".format(len(lc), lc))
-
+	return [d, l, lc]
 
 def compress_str(l, diStart=128):
-	compress(bytes(l,'ascii'), diStart)
+	return compress(bytes(l,'ascii'), diStart)
 
 
+
+def decompress(l, diStart=256):
+	ld = bytearray()
+	d = dict()
+	di = diStart
+	c = bytearray()
+	for i in range(len(l)):
+		if l[i] < diStart:
+			print(chr(l[i]), end='')
+			c.append(l[i])
+		else:
+			d[di] = c
+			di += 1
+
+	print(d)
 
 l = sys.argv[1]
-compress_str(l)
+[d, l, lc] = compress_str(l)
+decompress(lc, 128)
 
