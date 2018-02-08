@@ -6,9 +6,9 @@ import enum
 P = enum.Enum('P', 'START SEARCH')
 
 
-def compress(l):
+def compress(l, diStart = 256):
 	d = dict()
-	diStart = di = 128
+	di = diStart
 	state = P.START
 	for i in range(len(l)):
 		if (state == P.START):
@@ -35,7 +35,11 @@ def compress(l):
 	print(d)
 
 
+def compress_str(l, diStart=128):
+	compress(bytes(l,'utf-8'), diStart)
+
+
 
 l = sys.argv[1]
-compress(bytes(l,'utf-8'))
+compress_str(l)
 
