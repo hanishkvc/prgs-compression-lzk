@@ -26,6 +26,9 @@ for i in range(len(l)):
 		if (found == None):
 			d[di] = c
 			di += 1
+			if partFound == None:
+				partFound = l[i-1]
+				partFound = c[0]
 			print("{}, {}".format(partFound, l[i]))
 			state = P.START
 
