@@ -36,7 +36,7 @@ def compress(l, diStart = 256):
 
 
 def compress_str(l, diStart=128):
-	compress(bytes(l,'utf-8'), diStart)
+	compress(bytes(l,'ascii'), diStart)
 
 
 
