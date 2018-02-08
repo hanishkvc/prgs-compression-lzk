@@ -45,7 +45,7 @@ def compress_str(l, diStart=128):
 
 
 
-def decompress(l, diStart=256):
+def decompress(dOrig, l, diStart=256):
 	ld = bytearray()
 	d = dict()
 	di = diStart
@@ -57,10 +57,12 @@ def decompress(l, diStart=256):
 		else:
 			d[di] = c
 			di += 1
+			print(dOrig[l[i]], end='')
 
+	print()
 	print(d)
 
 l = sys.argv[1]
 [d, l, lc] = compress_str(l)
-decompress(lc, 128)
+decompress(d, lc, 128)
 
