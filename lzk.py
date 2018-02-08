@@ -12,11 +12,12 @@ def compress(l):
 	state = P.START
 	for i in range(len(l)):
 		if (state == P.START):
-			c = l[i]
+			c = bytearray()
+			c.append(l[i])
 			state = P.SEARCH
 			partFound = None
 		elif (state == P.SEARCH):
-			c += l[i]
+			c.append(l[i])
 			found = None
 			for j in range(diStart, di):
 				if d[j] == c:
@@ -36,5 +37,5 @@ def compress(l):
 
 
 l = sys.argv[1]
-compress(l)
+compress(bytes(l,'utf-8'))
 
