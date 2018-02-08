@@ -15,7 +15,7 @@ for i in range(len(l)):
 		c = l[i]
 		state = P.SEARCH
 		partFound = None
-	if (state == P.SEARCH):
+	elif (state == P.SEARCH):
 		c += l[i]
 		found = None
 		for j in range(diStart, di):
