@@ -6,6 +6,11 @@ import enum
 P = enum.Enum('P', 'START SEARCH')
 
 
+
+def dprint(o=None, end='\n'):
+	pass
+
+
 def compress(l, diStart = 256):
 	lc = bytearray()
 	d = dict()
@@ -35,34 +40,45 @@ def compress(l, diStart = 256):
 				lc.append(partFound)
 				lc.append(l[i])
 				state = P.START
-	print(d)
-	print("{}, [{}]".format(len(l), l))
-	print("{}, [{}]".format(len(lc), lc))
+	dprint(d)
+	dprint("{}, [{}]".format(len(l), l))
+	dprint("{}, [{}]".format(len(lc), lc))
 	return [d, l, lc]
+
+
 
 def compress_str(l, diStart=128):
 	return compress(bytes(l,'ascii'), diStart)
 
 
 
-def decompress(dOrig, l, diStart=256):
+def decompress_easy(dOrig, l, diStart=256):
 	ld = bytearray()
 	d = dict()
 	di = diStart
 	c = bytearray()
 	for i in range(len(l)):
 		if l[i] < diStart:
-			print(chr(l[i]), end='')
+			dprint(chr(l[i]), end='')
+			ld.append(l[i])
 			c.append(l[i])
 		else:
 			d[di] = c
 			di += 1
-			print(dOrig[l[i]], end='')
+			dprint(dOrig[l[i]], end='')
+			ld.extend(dOrig[l[i]])
+			c = bytearray()
+	dprint()
+	dprint(d)
+	dprint(ld)
+	return [d, l, ld]
 
-	print()
-	print(d)
+
 
 l = sys.argv[1]
 [d, l, lc] = compress_str(l)
-decompress(d, lc, 128)
+[d, lc, ld] = decompress_easy(d, lc, 128)
+print(l)
+print(lc)
+print(ld)
 
