@@ -6,7 +6,6 @@ import enum
 P = enum.Enum('P', 'START SEARCH')
 
 
-
 def dprint(o=None, end='\n'):
 	pass
 
@@ -52,6 +51,8 @@ def decompress(l, diStart = 256):
 	di = diStart
 	state = P.START
 	for i in range(len(l)):
+		# The dictionary index
+		# 0 to diStart-1 entries of the dictionary are implicit and themselves
 		if (state == P.START):
 			c = bytearray()
 			if l[i] < diStart:
@@ -62,24 +63,25 @@ def decompress(l, diStart = 256):
 				ld.extend(d[l[i]])
 			state = P.SEARCH
 			partFound = None
+		# The next/this char/byte/groupOfBits which made this sequence (dict[dictIndex]+next/this_char/byte/groupOfBits) unique
+		# and thus not already in dictionary, so forced this char/byte/groupOfBits to be explicitly here
 		elif (state == P.SEARCH):
 			c.append(l[i])
 			if l[i] < diStart:
-				found = None
-			else:
-				found = l[i]
-			if (found == None):
 				d[di] = c
 				di += 1
 				ld.append(l[i])
 				state = P.START
+			else:
+				print("DBG:LOGICALERROR:THINKINGERROR_GOOFUP")
+				exit()
 	print(d)
 	dprint("{}, [{}]".format(len(l), l))
 	dprint("{}, [{}]".format(len(ld), ld))
 	return [d, l, ld]
 
 
-def compress_str(l, diStart=128):
+def compress_asciistr(l, diStart=128):
 	return compress(bytes(l,'ascii'), diStart)
 
 
@@ -107,11 +109,11 @@ def decompress_easy(dOrig, l, diStart=256):
 
 
 l = sys.argv[1]
-[d, l, lc] = compress_str(l)
+[d, l, lc] = compress_asciistr(l)
 [d, lc, ld] = decompress_easy(d, lc, 128)
-print(l)
-print(lc)
-print(ld)
+print("{}, [{}]".format(len(l), l))
+print("{}, [{}]".format(len(lc), lc))
+print("{}, [{}]".format(len(ld), ld))
 [d, lc, ld] = decompress(lc, 128)
 print(ld)
 
