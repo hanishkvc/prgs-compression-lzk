@@ -52,6 +52,7 @@ def compress_Xin8(l, diStart = 128):
 					partFound = c[0]
 				dprint("{}, {}".format(partFound, l[i]))
 				if (partFound > 255):
+					i -= (len(d[partFound]) + 1)
 					[d, di] = dict_init(diStart)
 					lc.append(diStart)
 					lc.append(diStart)
