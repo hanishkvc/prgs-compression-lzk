@@ -23,7 +23,8 @@ def compress_Xin8(l, diStart = 128):
 	d = dict()
 	di = diStart
 	state = P.START
-	for i in range(len(l)):
+	i = 0
+	while (i < len(l)):
 		if (state == P.START):
 			c = bytearray()
 			c.append(l[i])
@@ -47,6 +48,7 @@ def compress_Xin8(l, diStart = 128):
 				lc.append(partFound)
 				lc.append(l[i])
 				state = P.START
+		i += 1
 	if (state != P.START):
 		lc.extend(c)
 	dprint(d)
