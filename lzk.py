@@ -80,6 +80,11 @@ def decompress_Xin8(l, diStart = 128):
 			if l[i] < diStart:
 				c.append(l[i])
 				ld.append(l[i])
+			elif l[i] == diStart:
+				dprint(d)
+				[d, di] = dict_init(diStart)
+				print("INFO: Reached dictionary reset point")
+				continue
 			else:
 				c.extend(d[l[i]])
 				ld.extend(d[l[i]])
