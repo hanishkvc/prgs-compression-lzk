@@ -18,10 +18,16 @@ def dprint(o=None, end='\n'):
 #     we can store a array of ascii characters directly and
 #     there can be 128 dictionary elements (which are nothing but sequences of 7bit values).
 
+
+def dict_init(diStart):
+	d = dict()
+	d[diStart] = diStart
+	return [d, diStart+1]
+
+
 def compress_Xin8(l, diStart = 128):
 	lc = bytearray()
-	d = dict()
-	di = diStart
+	[d, di] = dict_init(diStart)
 	state = P.START
 	i = 0
 	while (i < len(l)):
@@ -45,8 +51,13 @@ def compress_Xin8(l, diStart = 128):
 					#partFound = l[i-1]
 					partFound = c[0]
 				dprint("{}, {}".format(partFound, l[i]))
-				lc.append(partFound)
-				lc.append(l[i])
+				if (partFound > 255):
+					[d, di] = dict_init(diStart)
+					lc.append(diStart)
+					lc.append(diStart)
+				else:
+					lc.append(partFound)
+					lc.append(l[i])
 				state = P.START
 		i += 1
 	if (state != P.START):
@@ -59,8 +70,7 @@ def compress_Xin8(l, diStart = 128):
 
 def decompress_Xin8(l, diStart = 128):
 	ld = bytearray()
-	d = dict()
-	di = diStart
+	[d, di] = dict_init(diStart)
 	state = P.START
 	for i in range(len(l)):
 		# The dictionary index
