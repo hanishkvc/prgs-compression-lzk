@@ -43,7 +43,7 @@ def compress_Xin8(l, diStart = 128):
 				if partFound == None:
 					#partFound = l[i-1]
 					partFound = c[0]
-				print("{}, {}".format(partFound, l[i]))
+				dprint("{}, {}".format(partFound, l[i]))
 				lc.append(partFound)
 				lc.append(l[i])
 				state = P.START
@@ -83,7 +83,7 @@ def decompress_Xin8(l, diStart = 128):
 			else:
 				print("DBG:LOGICALERROR:THINKINGERROR_GOOFUP")
 				exit()
-	print(d)
+	dprint(d)
 	dprint("{}, [{}]".format(len(l), l))
 	dprint("{}, [{}]".format(len(ld), ld))
 	return [d, l, ld]
@@ -117,11 +117,9 @@ def decompress_easy(dOrig, l, diStart=256):
 
 
 l = sys.argv[1]
-[d, l, lc] = compress_asciistr(l)
-[d, lc, ld] = decompress_easy(d, lc, 128)
+[dc, l, lc] = compress_asciistr(l)
+[dd, lc, ld] = decompress_Xin8(lc, 128)
 print("{}, [{}]".format(len(l), l))
 print("{}, [{}]".format(len(lc), lc))
 print("{}, [{}]".format(len(ld), ld))
-[d, lc, ld] = decompress_Xin8(lc, 128)
-print(ld)
 
