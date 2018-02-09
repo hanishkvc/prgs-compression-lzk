@@ -54,7 +54,12 @@ def decompress(l, diStart = 256):
 	for i in range(len(l)):
 		if (state == P.START):
 			c = bytearray()
-			c.append(l[i])
+			if l[i] < diStart:
+				c.append(l[i])
+				ld.append(l[i])
+			else:
+				c.extend(d[l[i]])
+				ld.extend(d[l[i]])
 			state = P.SEARCH
 			partFound = None
 		elif (state == P.SEARCH):
@@ -63,22 +68,9 @@ def decompress(l, diStart = 256):
 				found = None
 			else:
 				found = l[i]
-				partFound = l[i]
 			if (found == None):
 				d[di] = c
 				di += 1
-				if partFound == None:
-					#partFound = l[i-1]
-					partFound = c[0]
-					if partFound >= diStart:
-						partFound = d[partFound]
-				else:
-					partFound = d[partFound]
-				print("{}, {}".format(partFound, l[i]))
-				if (type(partFound) == type(int())):
-					ld.append(partFound)
-				else:
-					ld.extend(partFound)
 				ld.append(l[i])
 				state = P.START
 	print(d)
