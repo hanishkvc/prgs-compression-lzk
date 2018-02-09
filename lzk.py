@@ -10,7 +10,15 @@ def dprint(o=None, end='\n'):
 	pass
 
 
-def compress(l, diStart = 256):
+# this compress concept is generic but bcas of bytes|bytearray usage,
+# it has restriction that it can process and or store data only in units of bytes
+# In turn the values in the input byte stream cann't have a value larger than or equal to diStart.
+# And the amount of dictionary elements that can be stored before it overflows is 256-diStart
+# For example With a diStart of 128
+#     we can store a array of ascii characters directly and
+#     there can be 128 dictionary elements (which are nothing but sequences of 7bit values).
+
+def compress_Xin8(l, diStart = 128):
 	lc = bytearray()
 	d = dict()
 	di = diStart
@@ -45,7 +53,7 @@ def compress(l, diStart = 256):
 	return [d, l, lc]
 
 
-def decompress(l, diStart = 256):
+def decompress_Xin8(l, diStart = 128):
 	ld = bytearray()
 	d = dict()
 	di = diStart
@@ -81,8 +89,8 @@ def decompress(l, diStart = 256):
 	return [d, l, ld]
 
 
-def compress_asciistr(l, diStart=128):
-	return compress(bytes(l,'ascii'), diStart)
+def compress_asciistr(l):
+	return compress_Xin8(bytes(l,'ascii'), 128)
 
 
 def decompress_easy(dOrig, l, diStart=256):
@@ -114,6 +122,6 @@ l = sys.argv[1]
 print("{}, [{}]".format(len(l), l))
 print("{}, [{}]".format(len(lc), lc))
 print("{}, [{}]".format(len(ld), ld))
-[d, lc, ld] = decompress(lc, 128)
+[d, lc, ld] = decompress_Xin8(lc, 128)
 print(ld)
 
