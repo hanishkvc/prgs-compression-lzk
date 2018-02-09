@@ -1,0 +1,95 @@
+   12  cd lzk/
+   14  vim lzk.py 
+   16  ./lzk.py "hello world"
+   18  vim lzk.py 
+   20  ./lzk.py "Hello world"
+   21  vim lzk.py 
+   22  ./lzk.py "Hello world"
+   23  vim lzk.py 
+   24  ./lzk.py "Hello world"
+   25  vim lzk.py 
+   34  git add lzk.py 
+   40  vim lzk.py 
+   43  ./lzk.py "Hello world"
+   44  vim lzk.py 
+   45  ./lzk.py "Hello world"
+   46  ./lzk.py "Hello world hello world"
+   47  ./lzk.py "Hello world hello world hello world"
+   48  ./lzk.py "Hello world hello world hello world hello world"
+   49  vim lzk.py 
+   51  vim lzk.py 
+   53  ./lzk.py "Hello world hello world hello world hello world"
+   55  git add lzk.py 
+   62  ./lzk.py "hello world hello world"
+   63  vim lzk.py 
+   65  ./lzk.py "hello world hello world"
+   68  ./lzk.py "hello world hello world"
+   75  ./lzk.py "hello world hello world"
+   76  ./lzk.py "hello world hello world hello world hello world hello world"
+   77  ./lzk.py "hello world hello world hello world hello world hello world hello world hello world hello world hello world"
+   82  ./lzk.py "hello world hello world hello world hello world hello world hello world hello world hello world hello world"
+   83  vim lzk.py 
+   84  ./lzk.py "hello world hello world hello world hello world hello world hello world hello world hello world hello world"
+   93  vim lzk.py 
+   94  ./lzk.py "hello world hello world hello world hello world hello world hello world hello world hello world hello world"
+   99  git add lzk.py 
+  104  vim lzk.py 
+  109  ./lzk.py "hello world hello world hello world hello world hello world hello world hello world hello world hello world"
+  110  ./lzk.py "hello world hello world hello world hello world hello world hello world hello world   hello world hello world"
+  113  vim lzk.py 
+  114  ./lzk.py "hello world hello world hello world hello world hello world hello world hello world   hello world hello world"
+  115  vim lzk.py 
+  116  ./lzk.py "hello world hello world hello world hello world hello world hello world hello world   hello world hello world"
+  122  vim lzk.py 
+  123  ./lzk.py "hello world hello world hello world hello world hello world hello world hello world   hello world hello world"
+  124  vim lzk.py 
+  125  ./lzk.py "hello world hello world hello world hello world hello world hello world hello world   hello world hello world"
+  126  vim lzk.py 
+  127  ./lzk.py "hello world hello world hello world hello world hello world hello world hello world   hello world hello world"
+  129  ./lzk.py "hello world hello world some odd things I am just going to write to see how things go with this, I have no idea actually but let me see how much repeatation if any will be found in this string, I am interested in understanding this a lot"
+  135  vim lzk.py 
+  136  ./lzk.py "hello world hello world some odd things I am just going to write to see how things go with this, I have no idea actually but let me see how much repeatation if any will be found in this string, I am interested in understanding this a lot"
+  139  vim lzk.py 
+  141  ./lzk.py "hello world hello world some odd things I am just going to write to see how things go with this, I have no idea actually but let me see how much repeatation if any will be found in this string, I am interested in understanding this a lot"
+  142  vim lzk.py 
+  143  ./lzk.py "hello world hello world some odd things I am just going to write to see how things go with this, I have no idea actually but let me see how much repeatation if any will be found in this string, I am interested in understanding this a lot"
+  144  ./lzk.py "hello world hello world some odd things I am just going to write to see how things go with this, I have no idea actually but let me see how much repeatation if any will be found in this string, I am interested in understanding this a lot. hope this new addition will make things smaller well that is my hope"
+  145  ./lzk.py "hello world hello world some odd things I am just going to write to see how things go with this, I have no idea actually but let me see how much repeatation if any will be found in this string, I am interested in understanding this a lot. hope this new addition will make things smaller well that is my hope. Well now I think the dictionary will overflow"
+  146  ./lzk.py "hello world hello world some odd things I am just going to write to see how things go with this, I have no idea actually but let me see how much repeatation if any will be found in this string, I am interested in understanding this a lot. hope this new addition will make things smaller well that is my hope. Well now I think the dictionary will overflow this is just luck"
+  147  ./lzk.py "hello world hello world some odd things I am just going to write to see how things go with this, I have no idea actually but let me see how much repeatation if any will be found in this string, I am interested in understanding this a lot. hope this new addition will make things smaller well that is my hope. Well now I think the dictionary will overflow"
+  148  ./lzk.py "hello world hello world some odd things I am just going to write to see how things go with this, I have no idea actually but let me see how much repeatation if any will be found in this string, I am interested in understanding this a lot. hope this new addition will make things smaller well that is my hope. Well now I think the dictionary will overflow this is just luck"
+  149  ./lzk.py "hello world hello world some odd things I am just going to write to see how things go with this, I have no idea actually but let me see how much repeatation if any will be found in this string, I am interested in understanding this a lot. hope this new addition will make things smaller well that is my hope. Well now I think the dictionary will overflow this is just luck I am bit surprised here what is occuring why is the number of dictionary entries not crossing 255???"
+  150  ./lzk.py "hello world hello world some odd things I am just going to write to see how things go with this, I have no idea actually but let me see how much repeatation if any will be found in this string, I am interested in understanding this a lot. hope this new addition will make things smaller well that is my hope. Well now I think the dictionary will overflow this is just luck I am bit surprised here what is occuring why is the number of dictionary entries not crossing 255"
+  151  ./lzk.py "hello world hello world some odd things I am just going to write to see how things go with this, I have no idea actually but let me see how much repeatation if any will be found in this string, I am interested in understanding this a lot. hope this new addition will make things smaller well that is my hope. Well now I think the dictionary will overflow this is just luck I am bit surprised here what is occuring why is the number of dictionary"
+  152  ./lzk.py "hello world hello world some odd things I am just going to write to see how things go with this, I have no idea actually but let me see how much repeatation if any will be found in this string, I am interested in understanding this a lot. hope this new addition will make things smaller well that is my hope. Well now I think the dictionary will overflow this is just luck I am bit surprised here what is occuring why is "
+  153  ./lzk.py "hello world hello world some odd things I am just going to write to see how things go with this, I have no idea actually but let me see how much repeatation if any will be found in this string, I am interested in understanding this a lot. hope this new addition will make things smaller well that is my hope. Well now I think the dictionary will overflow this is just luck I am bit surprised here "
+  154  ./lzk.py "hello world hello world some odd things I am just going to write to see how things go with this, I have no idea actually but let me see how much repeatation if any will be found in this string, I am interested in understanding this a lot. hope this new addition will make things smaller well that is my hope. Well now I think the dictionary will overflow this is just luck I am bit surprised here hello world"
+  155  ./lzk.py "hello world hello world some odd things I am just going to write to see how things go with this, I have no idea actually but let me see how much repeatation if any will be found in this string, I am interested in understanding this a lot. hope this new addition will make things smaller well that is my hope. Well now I think the dictionary will overflow this is just luck I am bit surprised here hello world not new"
+  156  ./lzk.py "hello world hello world some odd things I am just going to write to see how things go with this, I have no idea actually but let me see how much repeatation if any will be found in this string, I am interested in understanding this a lot. hope this new addition will make things smaller well that is my hope. Well now I think the dictionary will overflow this is just luck I am bit surprised here hello world not new?"
+  157  ./lzk.py "hello world hello world some odd things I am just going to write to see how things go with this, I have no idea actually but let me see how much repeatation if any will be found in this string, I am interested in understanding this a lot. hope this new addition will make things smaller well that is my hope. Well now I think the dictionary will overflow this is just luck I am bit surprised here hello world not new??"
+  158  ./lzk.py "hello world hello world some odd things I am just going to write to see how things go with this, I have no idea actually but let me see how much repeatation if any will be found in this string, I am interested in understanding this a lot. hope this new addition will make things smaller well that is my hope. Well now I think the dictionary will overflow this is just luck I am bit surprised here hello world not new???"
+  159  ./lzk.py "hello world hello world some odd things I am just going to write to see how things go with this, I have no idea actually but let me see how much repeatation if any will be found in this string, I am interested in understanding this a lot. hope this new addition will make things smaller well that is my hope. Well now I think the dictionary will overflow this is just luck I am bit surprised here hello world not new? ??"
+  160  ./lzk.py "hello world hello world some odd things I am just going to write to see how things go with this, I have no idea actually but let me see how much repeatation if any will be found in this string, I am interested in understanding this a lot. hope this new addition will make things smaller well that is my hope. Well now I think the dictionary will overflow this is just luck I am bit surprised here hello world not new? ???"
+  161  ./lzk.py "hello world hello world some odd things I am just going to write to see how things go with this, I have no idea actually but let me see how much repeatation if any will be found in this string, I am interested in understanding this a lot. hope this new addition will make things smaller well that is my hope. Well now I think the dictionary will overflow this is just luck I am bit surprised here hello world not new?"
+  162  ./lzk.py "hello world hello world some odd things I am just going to write to see how things go with this, I have no idea actually but let me see how much repeatation if any will be found in this string, I am interested in understanding this a lot. hope this new addition will make things smaller well that is my hope. Well now I think the dictionary will overflow this is just luck I am bit surprised here hello world not new??"
+  163  ./lzk.py "hello world hello world some odd things I am just going to write to see how things go with this, I have no idea actually but let me see how much repeatation if any will be found in this string, I am interested in understanding this a lot. hope this new addition will make things smaller well that is my hope. Well now I think the dictionary will overflow this is just luck I am bit surprised here hello world not new???"
+  164  ./lzk.py "hello world hello world some odd things I am just going to write to see how things go with this, I have no idea actually but let me see how much repeatation if any will be found in this string, I am interested in understanding this a lot. hope this new addition will make things smaller well that is my hope. Well now I think the dictionary will overflow this is just luck I am bit surprised here hello world not new?????"
+  165  ./lzk.py "hello world hello world some odd things I am just going to write to see how things go with this, I have no idea actually but let me see how much repeatation if any will be found in this string, I am interested in understanding this a lot. hope this new addition will make things smaller well that is my hope. Well now I think the dictionary will overflow this is just luck I am bit surprised here hello world not new?? ???"
+  166  ./lzk.py "hello world hello world some odd things I am just going to write to see how things go with this, I have no idea actually but let me see how much repeatation if any will be found in this string, I am interested in understanding this a lot. hope this new addition will make things smaller well that is my hope. Well now I think the dictionary will overflow this is just luck I am bit surprised here hello world not new?????"
+  170  vim lzk.py 
+  171  ./lzk.py "hello world hello world some odd things I am just going to write to see how things go with this, I have no idea actually but let me see how much repeatation if any will be found in this string, I am interested in understanding this a lot. hope this new addition will make things smaller well that is my hope. Well now I think the dictionary will overflow this is just luck I am bit surprised here hello world not new?????"
+  172  vim lzk.py 
+  173  ./lzk.py "hello world hello world some odd things I am just going to write to see how things go with this, I have no idea actually but let me see how much repeatation if any will be found in this string, I am interested in understanding this a lot. hope this new addition will make things smaller well that is my hope. Well now I think the dictionary will overflow this is just luck I am bit surprised here hello world not new?????"
+  174  vim lzk.py 
+  175  ./lzk.py "hello world hello world some odd things I am just going to write to see how things go with this, I have no idea actually but let me see how much repeatation if any will be found in this string, I am interested in understanding this a lot. hope this new addition will make things smaller well that is my hope. Well now I think the dictionary will overflow this is just luck I am bit surprised here hello world not new?????"
+  176  vim lzk.py 
+  177  ./lzk.py "hello world hello world some odd things I am just going to write to see how things go with this, I have no idea actually but let me see how much repeatation if any will be found in this string, I am interested in understanding this a lot. hope this new addition will make things smaller well that is my hope. Well now I think the dictionary will overflow this is just luck I am bit surprised here hello world not new?????"
+  178  vim lzk.py 
+  179  ./lzk.py "hello world hello world some odd things I am just going to write to see how things go with this, I have no idea actually but let me see how much repeatation if any will be found in this string, I am interested in understanding this a lot. hope this new addition will make things smaller well that is my hope. Well now I think the dictionary will overflow this is just luck I am bit surprised here hello world not new?????"
+  180  vim lzk.py 
+  181  ./lzk.py "hello world hello world some odd things I am just going to write to see how things go with this, I have no idea actually but let me see how much repeatation if any will be found in this string, I am interested in understanding this a lot. hope this new addition will make things smaller well that is my hope. Well now I think the dictionary will overflow this is just luck I am bit surprised here hello world not new?????"
+  182  vim lzk.py 
+  183  ./lzk.py "hello world hello world some odd things I am just going to write to see how things go with this, I have no idea actually but let me see how much repeatation if any will be found in this string, I am interested in understanding this a lot. hope this new addition will make things smaller well that is my hope. Well now I think the dictionary will overflow this is just luck I am bit surprised here hello world not new?????"
+  184  vim lzk.py 
+  185  history | grep lzk
+  186  history | grep lzk > lzk-run-history.01
