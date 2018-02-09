@@ -124,4 +124,8 @@ l = sys.argv[1]
 print("{}, [{}]".format(len(l), l))
 print("{}, [{}]".format(len(lc), lc))
 print("{}, [{}]".format(len(ld), ld))
+if (l == ld):
+	print("Success")
+else:
+	print("Error")
 
