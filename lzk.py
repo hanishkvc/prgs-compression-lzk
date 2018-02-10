@@ -46,12 +46,15 @@ def compress_Xin8(l, diStart = 128):
 					found = j
 					break
 			if (found == None):
-				#if (di > 255):
-				#	print("INFO:compress: Reseting dictionary: In time: len(d):{}".format(len(d)))
-				#	#i -= (len(d[partFound]) + 1)
-				#	[d, di] = dict_init(diStart)
-				#	lc.append(diStart)
-				#	lc.append(diStart)
+				state = P.START
+				if (di > 255):
+					print("INFO:compress: Reseting dictionary: In time: len(d):{}".format(len(d)))
+					#i -= (len(d[partFound]) + 1)
+					[d, di] = dict_init(diStart)
+					lc.append(diStart)
+					lc.append(diStart)
+					continue
+					print("TEst")
 				d[di] = c
 				di += 1
 				if partFound == None:
@@ -67,7 +70,6 @@ def compress_Xin8(l, diStart = 128):
 				else:
 					lc.append(partFound)
 					lc.append(l[i])
-				state = P.START
 	if (state != P.START):
 		lc.extend(c)
 	dprint(d)
