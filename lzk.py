@@ -80,14 +80,14 @@ def compress_Xin8(l, diStart = 128):
 
 
 def decompress_Xin8(l, diStart = 128):
-	ld = bytearray()
+	ld = array('B')
 	[d, di] = dict_init(diStart)
 	state = P.START
 	for i in range(len(l)):
 		# The dictionary index
 		# 0 to diStart-1 entries of the dictionary are implicit and themselves
 		if (state == P.START):
-			c = bytearray()
+			c = array('B')
 			if l[i] < diStart:
 				c.append(l[i])
 				ld.append(l[i])
@@ -120,7 +120,10 @@ def decompress_Xin8(l, diStart = 128):
 
 
 def compress_asciistr(l):
-	return compress_Xin8(bytes(l,'ascii'), 128)
+	t=bytes(l,'ascii')
+	la = array('B')
+	la.frombytes(t)
+	return compress_Xin8(la, 128)
 
 
 def decompress_easy(dOrig, l, diStart=256):
@@ -149,11 +152,12 @@ def decompress_easy(dOrig, l, diStart=256):
 l = sys.argv[1]
 [dc, l, lc] = compress_asciistr(l)
 [dd, lc, ld] = decompress_Xin8(lc, 128)
-print("{}, [{}]".format(len(l), l))
-print("{}, [{}]".format(len(lc), lc))
-print("{}, [{}]".format(len(ld), ld))
+print("{}, [{}]".format(len(l), l.tostring()))
+print("{}, [{}]".format(len(lc), lc.tostring()))
+print("{}, [{}]".format(len(ld), ld.tostring()))
 if (l == ld):
 	print("Success")
 else:
 	print("Error")
 
+# vim: set ts=8 noet sw=0 sts=0: #
