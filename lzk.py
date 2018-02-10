@@ -2,6 +2,7 @@
 
 import sys
 import enum
+from array import array
 
 P = enum.Enum('P', 'START SEARCH')
 
@@ -26,14 +27,14 @@ def dict_init(diStart):
 
 
 def compress_Xin8(l, diStart = 128):
-	lc = bytearray()
+	lc = array('B')
 	[d, di] = dict_init(diStart)
 	state = P.START
 	i = -1
 	while (i < len(l)-1):
 		i += 1
 		if (state == P.START):
-			c = bytearray()
+			c = array('B')
 			c.append(l[i])
 			state = P.SEARCH
 			partFound = None
