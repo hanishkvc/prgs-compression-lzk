@@ -52,6 +52,7 @@ def compress_Xin8(l, diStart = 128):
 					partFound = c[0]
 				dprint("{}, {}".format(partFound, l[i]))
 				if (partFound > 255):
+					print("INFO:compress: Reseting dictionary: Lazy path len(d):{}".format(len(d)))
 					i -= (len(d[partFound]) + 1)
 					[d, di] = dict_init(diStart)
 					lc.append(diStart)
@@ -83,8 +84,8 @@ def decompress_Xin8(l, diStart = 128):
 				ld.append(l[i])
 			elif l[i] == diStart:
 				dprint(d)
+				print("INFO:decompress: Reached dictionary reset point len(d):{}".format(len(d)))
 				[d, di] = dict_init(diStart)
-				print("INFO: Reached dictionary reset point")
 				continue
 			else:
 				c.extend(d[l[i]])
