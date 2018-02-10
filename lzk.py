@@ -30,7 +30,7 @@ def compress_Xin8(l, diStart = 128):
 	[d, di] = dict_init(diStart)
 	state = P.START
 	i = -1
-	while (i < len(l)):
+	while (i < len(l)-1):
 		i += 1
 		if (state == P.START):
 			c = bytearray()
