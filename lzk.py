@@ -49,7 +49,7 @@ def compress_Xin8(l, diStart = 128):
 				state = P.START
 				if (di > 255):
 					print("INFO:compress: Reseting dictionary: In time: len(d):{}".format(len(d)))
-					#i -= (len(d[partFound]) + 1)
+					i -= (len(c))
 					[d, di] = dict_init(diStart)
 					lc.append(diStart)
 					lc.append(diStart)
